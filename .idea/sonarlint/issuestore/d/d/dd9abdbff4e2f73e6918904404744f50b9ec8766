@@ -1,0 +1,28 @@
+
+™
+java:S1488H"^Immediately return this expression instead of assigning it to the temporary variable "jobDTO".(”Ö´mJ$d416441d-934c-4c07-8691-f70cffb9df66
+
+java:S2259W"L"NullPointerException" will be thrown when invoking method "convertToDto()".(ïÀöóşÿÿÿÿJ$7bfc99bc-1b13-419b-b9e3-2d32e5137297
+~
+java:S6813 "BRemove this field injection and use constructor injection instead.(êæÄŞJ$29a573b5-9757-4ef9-b984-c1a0b7e9fb1d
+w	java:S125"<This block of commented-out lines of code should be removed.(ŸÍêÇJ$e40650e4-463f-4ace-8ec5-6dce2798cad7
+w
+java:S18549";Remove this useless assignment to local variable "jobDTOS".(»ÂÚÔJ$88bd8ac7-1585-4f5c-addf-047a8a8e063b
+k	java:S1067"+Replace this use of System.out by a logger.(şìÉÈûÿÿÿÿJ$0cef678e-1ce5-49a9-abd6-da076069a3df
+h
+java:S14819",Remove this unused "jobDTOS" local variable.(»ÂÚÔJ$eb73020a-0790-4988-9744-e10e663a984c
+
+java:S6204<"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹J$639d54ae-c20c-4bfe-901e-c11c75915ea4
+i
+java:S1172>"(Remove this unused method parameter "e".(êšøóøÿÿÿÿJ$640abea8-9ac6-4c9f-9c98-03a5bbae232c
+|	java:S125J"<This block of commented-out lines of code should be removed.(‡‰•³úÿÿÿÿJ$90ff8854-0f09-4c38-92d0-3a3a10313d4e
+Ÿ
+java:S1128"\Remove this unused import 'io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker'.(›èÌÇ8Ëóÿûá1J$0303a3a9-e54b-4de8-8f9a-e5751994c239
+l
+java:S1128"JRemove this unused import 'io.github.resilience4j.retry.annotation.Retry'.(Ä³ß¾úÿÿÿÿ8ã˜€üá1
+“
+java:S1128"PRemove this unused import 'org.springframework.core.ParameterizedTypeReference'.(©ç8Ìóÿûá1J$2e1824d7-cdfe-4e04-b762-8b89fe5d1b12
+ˆ
+java:S1128"@Remove this unused import 'org.springframework.http.HttpMethod'.(Ê¨Ä¡øÿÿÿÿ8Ìóÿûá1J$e078f3ca-f8d8-4ca3-b398-20f06d89bd44
+Œ
+java:S1128"DRemove this unused import 'org.springframework.http.ResponseEntity'.(¶¯ø¦úÿÿÿÿ8Íóÿûá1J$e2d72ddb-3f2b-4233-bd66-082bb0fc96c3
