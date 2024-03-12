@@ -3,7 +3,9 @@ package com.collicode.companyms.company.impl;
 import com.collicode.companyms.company.Company;
 import com.collicode.companyms.company.CompanyRepository;
 import com.collicode.companyms.company.CompanyService;
+import com.collicode.companyms.company.clients.ReviewClient;
 import com.collicode.companyms.dto.ReviewMessage;
+import jakarta.ws.rs.NotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,9 +14,11 @@ import java.util.Optional;
 @Service
 public class CompanyServiceImpl implements CompanyService {
     private CompanyRepository companyRepository;
+    private  ReviewClient reviewClient;
 
-    public CompanyServiceImpl(CompanyRepository companyRepository) {
+    public CompanyServiceImpl(CompanyRepository companyRepository,ReviewClient reviewClient) {
         this.companyRepository = companyRepository;
+        this.reviewClient=reviewClient;
     }
 
     @Override
@@ -58,7 +62,11 @@ public class CompanyServiceImpl implements CompanyService {
 
     @Override
     public void updateCompanyRating(ReviewMessage reviewMessage) {
-
+    Company company =companyRepository.findById(reviewMessage.getCompanyId())
+        .orElseThrow(() -> new NotFoundException("Company Not Found"+reviewMessage.getCompanyId()));
+    double averageRating= reviewClient.getAverageRating(reviewMessage.getCompanyId());
+    company.setRating(averageRating);
+    companyRepository.save(company);
     }
 
 }
