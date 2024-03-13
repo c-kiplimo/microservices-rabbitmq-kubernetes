@@ -1,0 +1,20 @@
+
+™
+java:S1488D"^Immediately return this expression instead of assigning it to the temporary variable "jobDTO".(”Ö´mJ$eca64a46-5e15-4f6c-83ad-59afb975770d
+
+java:S2259S"L"NullPointerException" will be thrown when invoking method "convertToDto()".(ïÀöóşÿÿÿÿJ$95b98732-bfe7-423a-97d2-8d0a284de9b2
+~
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞJ$8ca5f033-756b-4cc3-8bab-7152152e8585
+w	java:S125"<This block of commented-out lines of code should be removed.(ŸÍêÇJ$237807f5-5882-4713-b966-bf4caa372b14
+w
+java:S18545";Remove this useless assignment to local variable "jobDTOS".(»ÂÚÔJ$2ccb5337-09d1-4e5a-bd54-ea9e0115eeca
+k	java:S1063"+Replace this use of System.out by a logger.(şìÉÈûÿÿÿÿJ$7f8af708-b63f-4638-9dd4-c09152e27e49
+h
+java:S14815",Remove this unused "jobDTOS" local variable.(»ÂÚÔJ$c94a34ef-42aa-45f7-94e6-f3a07f8ef803
+
+java:S62048"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹J$4235223e-d003-4ffe-8005-16b5899f5831
+i
+java:S1172:"(Remove this unused method parameter "e".(êšøóøÿÿÿÿJ$ae5ee5f7-8667-4cf9-8078-91d2ad9f6ac8
+|	java:S125F"<This block of commented-out lines of code should be removed.(‡‰•³úÿÿÿÿJ$1319cdf6-fe51-4819-a4c8-05000496d1ed
+™
+java:S1128"VRemove this unused import 'io.github.resilience4j.ratelimiter.annotation.RateLimiter'.(ÿƒŠ8Õ¬âÍã1J$b7237ab5-8576-4165-8f3c-14d5d42021e7

@@ -4,17 +4,16 @@ metadata:
   name: rabbitmq
   labels:
     app: rabbitmq
-    type: LoadBalancer
 spec:
+  type: NodePort
   selector:
     app: rabbitmq
-    type: NodePort
   ports:
-    - name : amqp
+    - name: amqp
       port: 5672
       targetPort: 5672
-      NodePort: 30500
-    - name : management
+      nodePort: 30500
+    - name: management
       port: 15672
       targetPort: 15672
-      NodePort: 30501
+      nodePort: 30501

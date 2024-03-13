@@ -9,6 +9,7 @@ import com.collicode.jobms.job.JobRepository;
 import com.collicode.jobms.job.JobService;
 import com.collicode.jobms.job.dto.JobDTO;
 import com.collicode.jobms.job.mapper.JobMapper;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -40,12 +41,12 @@ public class JobServiceImpl implements JobService {
     }
 
     @Override
-//    @CircuitBreaker(name = "companyBreaker",
-//            fallbackMethod = "companyBreakerFallback")
+    @CircuitBreaker(name = "companyBreaker",
+            fallbackMethod = "companyBreakerFallback")
 //    @Retry(name = "companyBreaker",
 //            fallbackMethod = "companyBreakerFallback")
-    @RateLimiter(name = "companyBreaker",
-        fallbackMethod = "companyBreakerFallback")
+//    @RateLimiter(name = "companyBreaker",
+//        fallbackMethod = "companyBreakerFallback")
     public List<JobDTO> findAll() {
         System.out.println("Attempt: "+ ++attempt);
         List<Job> jobs = jobRepository.findAll();

@@ -9,21 +9,20 @@ spec:
   selector:
     matchLabels:
       app: job
-    template:
-      metadata:
-        labels:
+  template:
+    metadata:
+      labels:
         app: job
-      spec:
-        containers:
-          - name: job
-            image: collins6299/job-service:latest
-            imagePullPolicy: Always
-            ports:
-              - containerPort: 8082
-            env:
-              - name: SPRING_PROFILES_ACTIVE
-                value: k8s
-        restartPolicy: Always
-    selector:
-      matchLabels:
-        app: job
+    spec:
+      containers:
+        - name: job
+          image: collins6299/job-service:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8082
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: k8s
+            - name: JAVA_TOOL_OPTIONS
+              value: -Xmx512m
+      restartPolicy: Always

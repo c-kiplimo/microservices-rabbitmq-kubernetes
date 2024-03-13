@@ -9,21 +9,18 @@ spec:
   selector:
     matchLabels:
       app: review
-    template:
-      metadata:
-        labels:
+  template:
+    metadata:
+      labels:
         app: review
-      spec:
-        containers:
-          - name: review
-            image: collins6299/review-service:latest
-            imagePullPolicy: Always
-            ports:
-              - containerPort: 8083
-            env:
-              - name: SPRING_PROFILES_ACTIVE
-                value: k8s
-        restartPolicy: Always
-    selector:
-      matchLabels:
-        app: review
+    spec:
+      containers:
+        - name: review
+          image: collins6299/review-service:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8083
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: k8s
+      restartPolicy: Always

@@ -9,21 +9,18 @@ spec:
   selector:
     matchLabels:
       app: company
-    template:
-      metadata:
-        labels:
+  template:
+    metadata:
+      labels:
         app: company
-      spec:
-        containers:
-          - name: company
-            image: collins6299/company-service:latest
-            imagePullPolicy: Always
-            ports:
-              - containerPort: 8081
-            env:
-              - name: SPRING_PROFILES_ACTIVE
-                value: k8s
-        restartPolicy: Always
-    selector:
-      matchLabels:
-        app: company
+    spec:
+      containers:
+        - name: company
+          image: collins6299/company-service:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8081
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: k8s
+      restartPolicy: Always
