@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: job
+  name: job
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: job
+    template:
+      metadata:
+        labels:
+        app: job
+      spec:
+        containers:
+          - name: job
+            image: collins6299/job-service:latest
+            imagePullPolicy: Always
+            ports:
+              - containerPort: 8082
+            env:
+              - name: SPRING_PROFILES_ACTIVE
+                value: k8s
+        restartPolicy: Always
+    selector:
+      matchLabels:
+        app: job
